@@ -87,4 +87,32 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Melhorias para responsividade */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Melhorar legibilidade em dispositivos móveis */
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px; /* Evita zoom automático no iOS */
+    }
+  }
+
+  /* Melhorar espaçamento de toque em dispositivos móveis */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Melhorar contraste e legibilidade */
+  .text-shadow-lg {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .drop-shadow-lg {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  }
 }

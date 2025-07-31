@@ -65,39 +65,39 @@ export default function ProductListSection() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-4xl font-bold text-stone-800 mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-800 mb-8 sm:mb-12">
           Nossos Itens Energéticos
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {products.map((product, index) => (
             <Card
               key={index}
-              className="flex flex-col items-center text-center p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              className="flex flex-col items-center text-center p-3 sm:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full"
             >
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
                 width={250}
                 height={250}
-                className="rounded-md mb-4 object-cover w-full h-48 sm:h-64"
+                className="rounded-md mb-3 sm:mb-4 object-cover w-full h-40 sm:h-48 md:h-64"
               />
               <CardHeader className="p-0 pb-2">
-                <CardTitle className="text-xl font-semibold text-stone-700">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-stone-700">
                   {product.name}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0 pb-4 flex-grow">
-                <CardDescription className="text-stone-600 text-sm">
+              <CardContent className="p-0 pb-3 sm:pb-4 flex-grow">
+                <CardDescription className="text-stone-600 text-sm leading-relaxed">
                   {product.description}
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-0 pt-2 flex flex-col items-center w-full">
-                <p className="text-2xl font-bold text-[#8B5E4B] mb-4">
+                <p className="text-xl sm:text-2xl font-bold text-[#8B5E4B] mb-3 sm:mb-4">
                   {product.price}
                 </p>
-                <Button className="bg-[#8B5E4B] hover:bg-[#8B5E4B] text-white w-full">
+                <Button className="bg-[#8B5E4B] hover:bg-[#8B5E4B] text-white w-full text-sm sm:text-base py-2 sm:py-3">
                   Adicionar ao Carrinho
                 </Button>
               </CardFooter>
