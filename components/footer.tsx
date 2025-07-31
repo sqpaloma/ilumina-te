@@ -66,11 +66,6 @@ export default function Footer() {
           >
             Projetos
           </Link>
-          <div className="flex items-center gap-2">
-            <span className="bg-[#8B5E4B] text-white text-xs px-2 py-0.5 rounded-full">
-              CONTRATANDO
-            </span>
-          </div>
         </div>
 
         {/* Coluna 4: Contato */}
